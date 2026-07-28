@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/bestjsonformatter)](https://www.npmjs.com/package/bestjsonformatter)
 [![CI](https://github.com/skrcode/bestjsonformatter-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/skrcode/bestjsonformatter-cli/actions/workflows/ci.yml)
-[![skills.sh](https://skills.sh/b/skrcode/bestjsonformatter-cli)](https://skills.sh/skrcode/bestjsonformatter-cli)
+[![skills.sh](https://skills.sh/b/skrcode/bestjsonformatter-cli)](https://skills.sh/skrcode/bestjsonformatter-cli/best-json-formatter)
 
 Fast, local JSON formatting and correctness checks without lossy
 `JSON.parse()`/`JSON.stringify()` round trips.
