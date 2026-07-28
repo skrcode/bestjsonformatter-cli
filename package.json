@@ -1,6 +1,6 @@
 {
   "name": "bestjsonformatter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Fast, local, lossless JSON formatting and correctness checks for developers, CI, and coding agents.",
   "type": "module",
   "bin": {

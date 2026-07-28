@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
 const cli = resolve("dist/cli.js");
+const packageVersion = JSON.parse(await readFile(resolve("package.json"), "utf8")).version;
 
 async function run(args, input) {
   return new Promise((resolveResult, reject) => {
@@ -31,7 +32,7 @@ const exact = String.raw`{"id":9007199254740993,"tiny":1.2300e-40,"escaped":"\u0
 
 const version = await run(["--version"]);
 assert.equal(version.code, 0);
-assert.equal(version.stdout.trim(), "0.2.0");
+assert.equal(version.stdout.trim(), packageVersion);
 
 const formatted = await run(["format", "-", "--indent", "2"], exact);
 assert.equal(formatted.code, 0);

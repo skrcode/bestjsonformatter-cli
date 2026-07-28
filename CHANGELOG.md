@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Fix the skills.sh badge destination so it opens the indexed `best-json-formatter` skill.
+
 ## 0.2.0
 
 - Publish the full CLI and lossless engine under the MIT license.
