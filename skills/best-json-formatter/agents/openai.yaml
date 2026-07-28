@@ -1,0 +1,4 @@
+interface:
+  display_name: "Best JSON Formatter"
+  short_description: "Check and format JSON without losing exact tokens"
+  default_prompt: "Use $best-json-formatter to check this project’s JSON files for syntax, duplicate keys, and unsafe numbers."

@@ -1,0 +1,71 @@
+{
+  "name": "bestjsonformatter",
+  "version": "0.2.0",
+  "description": "Fast, local, lossless JSON formatting and correctness checks for developers, CI, and coding agents.",
+  "type": "module",
+  "bin": {
+    "bestjsonformatter": "dist/cli.js",
+    "bjf": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "smoke": "node scripts/smoke-test.mjs",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build && npm run smoke && npm pack --dry-run",
+    "benchmark": "npm run build && node benchmarks/cli.mjs",
+    "prepublishOnly": "npm run check"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skrcode/bestjsonformatter-cli.git"
+  },
+  "homepage": "https://bestjsonformatter.org/cli",
+  "bugs": {
+    "url": "https://github.com/skrcode/bestjsonformatter-cli/issues"
+  },
+  "keywords": [
+    "json",
+    "formatter",
+    "validator",
+    "cli",
+    "lossless-json",
+    "json-schema",
+    "coding-agents",
+    "ci"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "diff": "^9.0.0",
+    "jsonpath-plus": "^10.4.0",
+    "jsonrepair": "^3.15.0",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.6",
+    "@types/node": "^20.19.24",
+    "jsonc-parser": "3.3.1",
+    "prettier": "3.9.6",
+    "typescript": "^5.9.3",
+    "vitest": "4.1.10"
+  }
+}
